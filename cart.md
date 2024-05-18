@@ -128,7 +128,7 @@
  
 	{
 	   total
-           shipping_fee
+	   shipping_fee
 	   coupon:{
 		id
 		title
@@ -154,7 +154,7 @@
   
   	{
 	   total
-           shipping_fee
+	    shipping_fee
 	   coupon:{
 		id
 		title
@@ -180,7 +180,7 @@
   
   	{
 	   total
-           shipping_fee
+	   shipping_fee
 	   coupon:{
 		id
 		title

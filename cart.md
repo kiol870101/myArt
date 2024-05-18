@@ -3,7 +3,7 @@
  	紀錄session_id
 
    	a裝置登入，b裝置不登入 / a裝置登入，b裝置又登入
-    	將session_id 的購物車資料更新user_id，查看先前使用者購物車是否有資料，有的話合併。
+    將session_id 的購物車資料更新user_id，查看先前使用者購物車是否有資料，有的話合併。
 
   	而資料當中都沒有user_id 以及 session_id 是因為我在後端通過 以下方式就可以取出來。
    	Auth::user()->id and Session::getId();

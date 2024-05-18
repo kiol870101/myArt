@@ -48,21 +48,21 @@
                 [item....]
             },//enditem
             coupon:{
-		    coupon_id
-		    coupon_title
-		    coupon_designated
-		    coupon_deductible
-		    coupon_discount
+		    id
+		    title
+		    designated
+		    deductible
+		    discount
             },
             dicount:{
-                discount_id
-                discount_title
-                discount_designated
-                discount_deductible
-                discount_discount
+                id
+                title
+                designated
+                deductible
+                discount
             }
         ],
-        shippingFee
+        shipping_fee
         total
     }
 
@@ -96,23 +96,23 @@
             coupon:{
 		    coupon_id
 		    coupon_title
-		    coupon_designated
-		    coupon_deductible
-		    coupon_discount
+		    designated
+		    deductible
+		    discount
             },
             dicount:{
-                discount_id
-                discount_title
-                discount_designated
-                discount_deductible
-                discount_discount
+                id
+                title
+                designated
+                deductible
+                discount
             }
         ],
         city,
         zone,
         [運送方式]
         note
-        shippingFee
+        shipping_fee
         total
     }
 
@@ -128,20 +128,20 @@
  
 	{
 	   total
-           shippingFee
+           shipping_fee
 	   coupon:{
-		coupon_id
-		coupon_title
-		coupon_designated
-		coupon_deductible
-		coupon_discount
+		id
+		title
+		designated
+		deductible
+		discount
 	    },
 	    dicount:{
-		discount_id
-		discount_title
-		discount_designated
-		discount_deductible
-		discount_discount
+		id
+		title
+		designated
+		deductible
+		discount
 	    }
 		
 	}
@@ -154,20 +154,20 @@
   
   	{
 	   total
-           shippingFee
+           shipping_fee
 	   coupon:{
-		coupon_id
-		coupon_title
-		coupon_designated
-		coupon_deductible
-		coupon_discount
+		id
+		title
+		designated
+		deductible
+		discount
 	    },
 	    dicount:{
-		discount_id
-		discount_title
-		discount_designated
-		discount_deductible
-		discount_discount
+		id
+		title
+		designated
+		deductible
+		discount
 	    }
 		
 	}
@@ -180,20 +180,20 @@
   
   	{
 	   total
-           shippingFee
+           shipping_fee
 	   coupon:{
-		coupon_id
-		coupon_title
-		coupon_designated
-		coupon_deductible
-		coupon_discount
+		id
+		title
+		designated
+		deductible
+		discount
 	    },
 	    dicount:{
-		discount_id
-		discount_title
-		discount_designated
-		discount_deductible
-		discount_discount
+		id
+		title
+		designated
+		deductible
+		discount
 	    }
 		
 	}

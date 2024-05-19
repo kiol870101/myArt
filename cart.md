@@ -1,13 +1,13 @@
-
-	a裝置不登入 b裝置不登入
- 	紀錄session_id
-
-   	a裝置登入，b裝置不登入 / a裝置登入，b裝置又登入
-    將session_id 的購物車資料更新user_id，查看先前使用者購物車是否有資料，有的話合併。
-
-  	而資料當中都沒有user_id 以及 session_id 是因為我在後端通過 以下方式就可以取出來。
-   	Auth::user()->id and Session::put('session_id',Str::uuid());
-	
+  	1.a登入，b不登入
+   	  a登入用 user_id 紀錄，b不登入 判斷瀏覽器 cookie 是否有存在的uuid ，沒有的話產生一個
+   	2.然後 b 在登入
+	  利用 uuid 匹配 cart_id 更新為 user_id 如果user_id已經有資料就合併一起
+ 	3.以及  a b 都登入
+  	  應該會有一支全域的購物車api ，這樣不管ab裝置做什麼動作都可以更新購物車資料
+   	4.ab 都不登入
+      就各自紀錄自己的uuid做購物車
+      不同裝置會有不同的cookie，我認為不一定要紀錄在資料表當中，但如果有紀錄在資料表當中會是更好的
+      這樣他每次進入我可以直接幫他保持登入的狀況，可以減少在沒有登入的情況下加入購物車的麻煩..
 
 <h1>[POST] /carts </h1>
  <p>帶入資料</p>
@@ -20,18 +20,6 @@
 	    // todo: two devices non login and then devices logined
      	    session_id //Session::getId();
 	}
- <p>問題：為什麼要帶出/入 uuid跟session_id?</p>
-	
-	Ａ裝置/Ｂ裝置
-	    Session::getId();
-	
-	登入後 更新購物車資料所以我應該在寫一隻api
-	而為什麼要在產出uuid?我已經有session_id了
-	使用session紀錄
-		1.可以依照使用的瀏覽器紀錄session_id 前提時效要夠長
-		2.而uuid每次的生成都不一樣，所以uuid應該不適用在尚未登入的狀況下
-		3.使用uuid應該也不是用在cart_id or cart_items_id 上 還是有什麼用途？
-
 
 <h1>[GET]  /carts</h1>
 <p>回傳資料</p>
